@@ -39,7 +39,7 @@ public extension Swifter {
     public func getListsSubscribedByUserWithReverse(reverse: Bool?, success: ((lists: [JSONValue]?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/list.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         if reverse != nil {
             parameters["reverse"] = reverse!
         }
@@ -56,7 +56,7 @@ public extension Swifter {
     public func getListsSubscribedByUserWithID(userID: String, reverse: Bool?, success: ((lists: [JSONValue]?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/list.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["userID"] = userID
 
         if reverse != nil {
@@ -75,7 +75,7 @@ public extension Swifter {
     public func getListsSubscribedByUserWithScreenName(screenName: String, reverse: Bool?, success: ((lists: [JSONValue]?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/list.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["screen_name"] = screenName
 
         if reverse != nil {
@@ -99,7 +99,7 @@ public extension Swifter {
     public func getListsStatusesWithListID(listID: Int, ownerScreenName: String, sinceID: String?, maxID: String?, count: Int?, includeEntities: Bool?, includeRTs: Bool?, success: ((statuses: [JSONValue]?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/statuses.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         parameters["owner_screen_name"] = ownerScreenName
 
@@ -131,7 +131,7 @@ public extension Swifter {
     public func getListsStatusesWithListID(listID: Int, ownerID: Int, sinceID: String?, maxID: String?, count: Int?, includeEntities: Bool?, includeRTs: Bool?, success: ((statuses: [JSONValue]?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/statuses.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         parameters["owner_id"] = ownerID
 
@@ -163,7 +163,7 @@ public extension Swifter {
     public func getListsStatusesWithSlug(slug: String, ownerScreenName: String, sinceID: String?, maxID: String?, count: Int?, includeEntities: Bool?, includeRTs: Bool?, success: ((statuses: [JSONValue]?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/statuses.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_screen_name"] = ownerScreenName
 
@@ -195,7 +195,7 @@ public extension Swifter {
     public func getListsStatusesWithSlug(slug: String, ownerID: Int, sinceID: String?, maxID: String?, count: Int?, includeEntities: Bool?, includeRTs: Bool?, success: ((statuses: [JSONValue]?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/statuses.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_id"] = ownerID
 
@@ -232,7 +232,7 @@ public extension Swifter {
     public func postListsMembersDestroyWithListID(listID: Int, userID: String, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         parameters["user_id"] = userID
 
@@ -248,7 +248,7 @@ public extension Swifter {
     public func postListsMembersDestroyWithListID(listID: Int, screenName: String, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         parameters["screen_name"] = screenName
 
@@ -264,7 +264,7 @@ public extension Swifter {
     public func postListsMembersDestroyWithSlug(slug: String, userID: String, ownerScreenName: String, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["userID"] = userID
         parameters["owner_screen_name"] = ownerScreenName
@@ -281,7 +281,7 @@ public extension Swifter {
     public func postListsMembersDestroyWithSlug(slug: String, screenName: String, ownerScreenName: String, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["screen_name"] = screenName
         parameters["owner_screen_name"] = ownerScreenName
@@ -298,7 +298,7 @@ public extension Swifter {
     public func postListsMembersDestroyWithSlug(slug: String, userID: String, ownerID: Int, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["userID"] = userID
         parameters["owner_id"] = ownerID
@@ -315,7 +315,7 @@ public extension Swifter {
     public func postListsMembersDestroyWithSlug(slug: String, screenName: String, ownerID: Int, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["screen_name"] = screenName
         parameters["owner_id"] = ownerID
@@ -337,7 +337,7 @@ public extension Swifter {
     public func getListsMembershipsWithUserID(userID: String, cursor: Int?, filterToOwnedLists: Bool?, success: ((lists: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/memberships.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["user_id"] = userID
 
         if cursor != nil {
@@ -350,12 +350,7 @@ public extension Swifter {
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
 
-            switch (json["lists"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let lists, let previousCursor, let nextCursor):
-                success?(lists: lists, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(lists: nil, previousCursor: nil, nextCursor: nil)
-            }
+            success?(lists: json["lists"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -363,7 +358,7 @@ public extension Swifter {
     public func getListsMembershipsWithScreenName(screenName: String, cursor: Int?, filterToOwnedLists: Bool?, success: ((lists: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/memberships.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["screen_name"] = screenName
 
         if cursor != nil {
@@ -376,12 +371,7 @@ public extension Swifter {
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
 
-            switch (json["lists"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let lists, let previousCursor, let nextCursor):
-                success?(lists: lists, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(lists: nil, previousCursor: nil, nextCursor: nil)
-            }
+            success?(lists: json["lists"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -394,7 +384,7 @@ public extension Swifter {
     public func getListsSubscribersWithListID(listID: Int, ownerScreenName: String?, cursor: Int?, includeEntities: Bool?, skipStatus: Bool?, success: ((users: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         if ownerScreenName != nil {
             parameters["owner_screen_name"] = ownerScreenName!
@@ -411,13 +401,8 @@ public extension Swifter {
 
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
-
-            switch (json["users"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let users, let previousCursor, let nextCursor):
-                success?(users: users, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(users: nil, previousCursor: nil, nextCursor: nil)
-            }
+            
+            success?(users: json["users"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -425,7 +410,7 @@ public extension Swifter {
     public func getListsSubscribersWithListID(listID: Int, ownerID: Int?, cursor: Int?, includeEntities: Bool?, skipStatus: Bool?, success: ((users: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         if ownerID != nil {
             parameters["owner_id"] = ownerID!
@@ -443,12 +428,7 @@ public extension Swifter {
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
 
-            switch (json["users"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let users, let previousCursor, let nextCursor):
-                success?(users: users, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(users: nil, previousCursor: nil, nextCursor: nil)
-            }
+            success?(users: json["users"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -456,7 +436,7 @@ public extension Swifter {
     public func getListsSubscribersWithSlug(slug: String, ownerScreenName: String?, cursor: Int?, includeEntities: Bool?, skipStatus: Bool?, success: ((users: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         if ownerScreenName != nil {
             parameters["owner_screen_name"] = ownerScreenName!
@@ -474,12 +454,7 @@ public extension Swifter {
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
 
-            switch (json["users"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let users, let previousCursor, let nextCursor):
-                success?(users: users, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(users: nil, previousCursor: nil, nextCursor: nil)
-            }
+            success?(users: json["users"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -487,7 +462,7 @@ public extension Swifter {
     public func getListsSubscribersWithSlug(slug: String, ownerID: Int?, cursor: Int?, includeEntities: Bool?, skipStatus: Bool?, success: ((users: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         if ownerID != nil {
             parameters["owner_id"] = ownerID!
@@ -505,12 +480,7 @@ public extension Swifter {
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
 
-            switch (json["users"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let users, let previousCursor, let nextCursor):
-                success?(users: users, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(users: nil, previousCursor: nil, nextCursor: nil)
-            }
+            success?(users: json["users"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -523,7 +493,7 @@ public extension Swifter {
     public func postListsSubscribersCreateWithListID(listID: Int, ownerScreenName: String, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/create.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["owner_screen_name"] = ownerScreenName
         parameters["list_id"] = listID
 
@@ -539,7 +509,7 @@ public extension Swifter {
     public func postListsSubscribersCreateWithListID(listID: Int, ownerID: Int, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/create.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["owner_id"] = ownerID
         parameters["list_id"] = listID
 
@@ -555,7 +525,7 @@ public extension Swifter {
     public func postListsSubscribersCreateWithSlug(slug: String, ownerScreenName: String, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/create.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["owner_screen_name"] = ownerScreenName
         parameters["slug"] = slug
 
@@ -571,7 +541,7 @@ public extension Swifter {
     public func postListsSubscribersCreateWithSlug(slug: String, ownerID: Int, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/create.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["owner_id"] = ownerID
         parameters["slug"] = slug
 
@@ -592,7 +562,7 @@ public extension Swifter {
     public func getListsSubscribersShowWithListID(listID: Int, userID: String, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         parameters["user_id"] = userID
 
@@ -615,7 +585,7 @@ public extension Swifter {
     public func getListsSubscribersShowWithListID(listID: Int, screenName: String, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         parameters["screen_name"] = screenName
 
@@ -638,7 +608,7 @@ public extension Swifter {
     public func getListsSubscribersShowWithSlug(slug: String, ownerID: Int, userID: String, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_id"] = ownerID
         parameters["user_id"] = userID
@@ -662,7 +632,7 @@ public extension Swifter {
     public func getListsSubscribersShowWithSlug(slug: String, ownerID: Int, screenName: Int, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_id"] = ownerID
         parameters["screen_name"] = screenName
@@ -686,7 +656,7 @@ public extension Swifter {
     public func getListsSubscribersShowWithSlug(slug: String, ownerScreenName: Int, userID: String, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_screen_name"] = ownerScreenName
         parameters["user_id"] = userID
@@ -710,7 +680,7 @@ public extension Swifter {
     public func getListsSubscribersShowWithSlug(slug: String, ownerScreenName: Int, screenName: Int, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_screen_name"] = ownerScreenName
         parameters["screen_name"] = screenName
@@ -739,7 +709,7 @@ public extension Swifter {
     public func postListsSubscribersDestroyWithListID(listID: Int, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["listID"] = listID
 
         self.postJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
@@ -754,7 +724,7 @@ public extension Swifter {
     public func postListsSubscribersDestroyWithSlug(slug: String, ownerScreenName: String, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_screen_name"] = ownerScreenName
 
@@ -770,7 +740,7 @@ public extension Swifter {
     public func postListsSubscribersDestroyWithSlug(slug: String, ownerID: Int, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_id"] = ownerID
 
@@ -793,7 +763,7 @@ public extension Swifter {
     public func postListsMembersCreateWithListID(listID: Int, userIDs: [String], includeEntities: Bool?, skipStatus: Bool?, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/create_all.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
 
         let userIDStrings = userIDs.map { String($0) }
@@ -818,7 +788,7 @@ public extension Swifter {
     public func postListsMembersCreateWithListID(listID: Int, screenNames: [String], includeEntities: Bool?, skipStatus: Bool?, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/create_all.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         parameters["screen_name"] = join(",", screenNames)
 
@@ -841,7 +811,7 @@ public extension Swifter {
     public func postListsMembersCreateWithSlug(slug: String, ownerID: Int, userIDs: [String], includeEntities: Bool?, skipStatus: Bool?, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/create_all.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_id"] = ownerID
 
@@ -867,7 +837,7 @@ public extension Swifter {
     public func postListsMembersCreateWithSlug(slug: String, ownerID: Int, screenNames: [String], includeEntities: Bool?, skipStatus: Bool?, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/create_all.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_id"] = ownerID
         parameters["screen_name"] = join(",", screenNames)
@@ -891,7 +861,7 @@ public extension Swifter {
     public func postListsMembersCreateWithSlug(slug: String, ownerScreenName: String, userIDs: [String], includeEntities: Bool?, skipStatus: Bool?, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/create_all.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_screen_name"] = ownerScreenName
 
@@ -917,7 +887,7 @@ public extension Swifter {
     public func postListsMembersCreateWithSlug(slug: String, ownerScreenName: String, screenNames: [String], includeEntities: Bool?, skipStatus: Bool?, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/create_all.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_screen_name"] = ownerScreenName
         parameters["screen_name"] = join(",", screenNames)
@@ -946,7 +916,7 @@ public extension Swifter {
     public func getListsMembersShowWithListID(listID: Int, userID: String, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         parameters["user_id"] = userID
 
@@ -969,7 +939,7 @@ public extension Swifter {
     public func getListsMembersShowWithListID(listID: Int, screenName: String, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         parameters["screen_name"] = screenName
 
@@ -992,7 +962,7 @@ public extension Swifter {
     public func getListsMembersShowWithSlug(slug: String, ownerID: Int, userID: String, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_id"] = ownerID
         parameters["user_id"] = userID
@@ -1016,7 +986,7 @@ public extension Swifter {
     public func getListsMembersShowWithSlug(slug: String, ownerID: Int, screenName: Int, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_id"] = ownerID
         parameters["screen_name"] = screenName
@@ -1040,7 +1010,7 @@ public extension Swifter {
     public func getListsMembersShowWithSlug(slug: String, ownerScreenName: Int, userID: String, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_screen_name"] = ownerScreenName
         parameters["user_id"] = userID
@@ -1069,7 +1039,7 @@ public extension Swifter {
     public func getListsMembersShowWithSlug(slug: String, ownerScreenName: Int, screenName: Int, includeEntities: Bool?, skipStatus: Bool?, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_screen_name"] = ownerScreenName
         parameters["screen_name"] = screenName
@@ -1093,7 +1063,7 @@ public extension Swifter {
     public func getListsMembersWithListID(listID: Int, ownerScreenName: String?, cursor: Int?, includeEntities: Bool?, skipStatus: Bool?, success: ((users: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         if ownerScreenName != nil {
             parameters["owner_screen_name"] = ownerScreenName!
@@ -1111,12 +1081,7 @@ public extension Swifter {
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
 
-            switch (json["users"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let users, let previousCursor, let nextCursor):
-                success?(users: users, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(users: nil, previousCursor: nil, nextCursor: nil)
-            }
+            success?(users: json["users"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -1124,7 +1089,7 @@ public extension Swifter {
     public func getListsMembersWithListID(listID: Int, ownerID: Int?, cursor: Int?, includeEntities: Bool?, skipStatus: Bool?, success: ((users: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         if ownerID != nil {
             parameters["owner_id"] = ownerID!
@@ -1142,12 +1107,7 @@ public extension Swifter {
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
 
-            switch (json["users"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let users, let previousCursor, let nextCursor):
-                success?(users: users, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(users: nil, previousCursor: nil, nextCursor: nil)
-            }
+            success?(users: json["users"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -1155,7 +1115,7 @@ public extension Swifter {
     public func getListsMembersWithSlug(slug: String, ownerScreenName: String?, cursor: Int?, includeEntities: Bool?, skipStatus: Bool?, success: ((users: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         if ownerScreenName != nil {
             parameters["owner_screen_name"] = ownerScreenName!
@@ -1173,12 +1133,7 @@ public extension Swifter {
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
 
-            switch (json["users"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let users, let previousCursor, let nextCursor):
-                success?(users: users, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(users: nil, previousCursor: nil, nextCursor: nil)
-            }
+            success?(users: json["users"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -1186,7 +1141,7 @@ public extension Swifter {
     public func getListsMembersWithSlug(slug: String, ownerID: Int?, cursor: Int?, includeEntities: Bool?, skipStatus: Bool?, success: ((users: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         if ownerID != nil {
             parameters["owner_id"] = ownerID!
@@ -1204,12 +1159,7 @@ public extension Swifter {
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
 
-            switch (json["users"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let users, let previousCursor, let nextCursor):
-                success?(users: users, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(users: nil, previousCursor: nil, nextCursor: nil)
-            }
+            success?(users: json["users"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -1223,7 +1173,7 @@ public extension Swifter {
     public func postListsMembersCreateWithListID(listID: Int, ownerScreenName: String, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/create.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["owner_screen_name"] = ownerScreenName
         parameters["list_id"] = listID
 
@@ -1239,7 +1189,7 @@ public extension Swifter {
     public func postListsMembersCreateWithListID(listID: Int, ownerID: Int, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/create.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["owner_id"] = ownerID
         parameters["list_id"] = listID
 
@@ -1255,7 +1205,7 @@ public extension Swifter {
     public func postListsMembersCreateWithSlug(slug: String, ownerScreenName: String, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/create.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["owner_screen_name"] = ownerScreenName
         parameters["slug"] = slug
 
@@ -1271,7 +1221,7 @@ public extension Swifter {
     public func postListsMembersCreateWithSlug(slug: String, ownerID: Int, success: ((user: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscribers/create.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["owner_id"] = ownerID
         parameters["slug"] = slug
 
@@ -1292,7 +1242,7 @@ public extension Swifter {
     public func postListsDestroyWithListID(listID: Int, success: ((list: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
 
         self.postJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
@@ -1307,7 +1257,7 @@ public extension Swifter {
     public func postListsDestroyWithSlug(slug: String, ownerID: Int, success: ((list: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_id"] = ownerID
 
@@ -1323,7 +1273,7 @@ public extension Swifter {
     public func postListsDestroyWithSlug(slug: String, ownerScreenName: String, success: ((list: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/destroy.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_screen_name"] = ownerScreenName
 
@@ -1344,7 +1294,7 @@ public extension Swifter {
     public func postListsUpdateWithListID(listID: Int, name: String?, publicMode: Bool?, description: String?, success: ((list: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/update.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
 
         if name != nil {
@@ -1374,7 +1324,7 @@ public extension Swifter {
     public func postListsUpdateWithSlug(slug: String, ownerID: Int, name: String?, publicMode: Bool?, description: String?, success: ((list: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/update.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_id"] = ownerID
 
@@ -1405,7 +1355,7 @@ public extension Swifter {
     public func postListsUpdateWithSlug(slug: String, ownerScreenName: String, name: String?, publicMode: Bool?, description: String?, success: ((list: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/update.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_screen_name"] = ownerScreenName
 
@@ -1441,7 +1391,7 @@ public extension Swifter {
     public func postListsCreateWithName(name: String, publicMode: Bool?, description: String?, success: ((list: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/create.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["name"] = name
 
         if publicMode != nil {
@@ -1473,7 +1423,7 @@ public extension Swifter {
     public func getListsShowWithID(listID: Int, success: ((list: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
 
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
@@ -1488,7 +1438,7 @@ public extension Swifter {
     public func getListsShowWithSlug(slug: String, ownerID: Int, success: ((list: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_id"] = ownerID
 
@@ -1504,7 +1454,7 @@ public extension Swifter {
     public func getListsShowWithSlug(slug: String, ownerScreenName: String, success: ((list: Dictionary<String, JSONValue>?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/show.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["owner_screen_name"] = ownerScreenName
 
@@ -1525,7 +1475,7 @@ public extension Swifter {
     public func getListsSubscriptionsWithUserID(userID: String, count: Int?, cursor: Int?, success: ((lists: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscriptions.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["user_id"] = userID
 
         if count != nil {
@@ -1538,12 +1488,7 @@ public extension Swifter {
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
 
-            switch (json["lists"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let lists, let previousCursor, let nextCursor):
-                success?(lists: lists, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(lists: nil, previousCursor: nil, nextCursor: nil)
-            }
+            success?(lists: json["lists"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -1551,7 +1496,7 @@ public extension Swifter {
     public func getListsSubscriptionsWithScreenName(screenName: String, count: Int?, cursor: Int?, success: ((lists: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/subscriptions.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["screen_name"] = screenName
 
         if count != nil {
@@ -1564,12 +1509,7 @@ public extension Swifter {
         self.getJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
 
-            switch (json["lists"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let lists, let previousCursor, let nextCursor):
-                success?(lists: lists, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(lists: nil, previousCursor: nil, nextCursor: nil)
-            }
+            success?(lists: json["lists"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
 
             }, failure: failure)
     }
@@ -1584,7 +1524,7 @@ public extension Swifter {
     public func postListsMembersDestroyAllWithListID(listID: Int, userIDs: [String], success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy_all.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
 
         let userIDStrings = userIDs.map { String($0) }
@@ -1602,7 +1542,7 @@ public extension Swifter {
     public func postListsMembersDestroyAllWithListID(listID: Int, screenNames: [String], success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy_all.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["list_id"] = listID
         parameters["screen_name"] = join(",", screenNames)
 
@@ -1618,7 +1558,7 @@ public extension Swifter {
     public func postListsMembersDestroyAllWithSlug(slug: String, userIDs: [String], ownerScreenName: String, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy_all.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
 
         let userIDStrings = userIDs.map { String($0) }
@@ -1638,7 +1578,7 @@ public extension Swifter {
     public func postListsMembersDestroyAllWithSlug(slug: String, screenNames: [String], ownerScreenName: String, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy_all.json"
 
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["screen_name"] = join(",", screenNames)
         parameters["owner_screen_name"] = ownerScreenName
@@ -1655,7 +1595,7 @@ public extension Swifter {
     public func postListsMembersDestroyAllWithSlug(slug: String, userIDs: [String], ownerID: Int, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy_all.json"
         
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
 
         let userIDStrings = userIDs.map { String($0) }
@@ -1675,7 +1615,7 @@ public extension Swifter {
     public func postListsMembersDestroyAllWithSlug(slug: String, screenNames: [String], ownerID: Int, success: ((response: JSON?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/members/destroy_all.json"
         
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["slug"] = slug
         parameters["screen_name"] = join(",", screenNames)
         parameters["owner_id"] = ownerID
@@ -1697,7 +1637,7 @@ public extension Swifter {
     public func getListsOwnershipsWithUserID(userID: String, count: Int?, cursor: Int?, success: ((lists: [JSONValue]?, previousCursor: Int?, nextCursor: Int?) -> Void)?, failure: FailureHandler?) {
         let path = "lists/ownerships.json"
         
-        var parameters = Dictionary<String, AnyObject>()
+        var parameters = Dictionary<String, Any>()
         parameters["user_id"] = userID
         
         if count != nil {
@@ -1710,13 +1650,8 @@ public extension Swifter {
         self.postJSONWithPath(path, baseURL: self.apiURL, parameters: parameters, uploadProgress: nil, downloadProgress: nil, success: {
             json, response in
             
-            switch (json["lists"].array, json["previous_cursor"].integer, json["next_cursor"].integer) {
-            case (let lists, let previousCursor, let nextCursor):
-                success?(lists: lists, previousCursor: previousCursor, nextCursor: nextCursor)
-            default:
-                success?(lists: nil, previousCursor: nil, nextCursor: nil)
-            }
-            
+            success?(lists: json["lists"].array, previousCursor: json["previous_cursor"].integer, nextCursor: json["next_cursor"].integer)
+
             }, failure: failure)
         
     }

@@ -55,11 +55,11 @@ class ViewController: NSViewController {
                             println("There are no Twitter accounts configured. You can add or create a Twitter account in Settings.")
                         }
                         else {
-                            let twitterAccount = twitterAccounts[0] as ACAccount
+                            let twitterAccount = twitterAccounts[0] as! ACAccount
 
                             let swifter = Swifter(account: twitterAccount)
 
-                            swifter.getStatusesHomeTimelineWithCount(20, sinceID: nil, maxID: nil, trimUser: true, contributorDetails: false, includeEntities: true, success: {
+                            swifter.getStatusesHomeTimelineWithCount(20, success: {
                                 (statuses: [JSONValue]?) in
 
                                 println(statuses)
@@ -77,12 +77,12 @@ class ViewController: NSViewController {
         else {
             let swifter = Swifter(consumerKey: "RErEmzj7ijDkJr60ayE2gjSHT", consumerSecret: "SbS0CHk11oJdALARa7NDik0nty4pXvAxdt7aj0R5y1gNzWaNEx")
 
-            swifter.authorizeWithCallbackURL(NSURL(string: "swifter://success"), success: {
+            swifter.authorizeWithCallbackURL(NSURL(string: "swifter://success")!, success: {
                 accessToken, response in
 
                 println("Successfully authorized")
 
-                swifter.getStatusesHomeTimelineWithCount(20, sinceID: nil, maxID: nil, trimUser: true, contributorDetails: false, includeEntities: true, success: {
+                swifter.getStatusesHomeTimelineWithCount(20, success: {
                     (statuses: [JSONValue]?) in
 
                     println(statuses)
